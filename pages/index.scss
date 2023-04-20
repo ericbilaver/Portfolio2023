@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Halyard-Display";
+  src: url(../assets/fonts/c4d8819fda4c3fd79e36cedcc8d422bb.woff) format('woff'),
+    url(../assets/fonts/c4d8819fda4c3fd79e36cedcc8d422bb.woff2) format('woff2');
+  font-weight: 200;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+  background-attachment: fixed;
+}
+
+.main {
+  display: flex;
+  font-family: 'Halyard-Display';
+  color: white;
+  width: 100%;
+  height: 100%;
+}
