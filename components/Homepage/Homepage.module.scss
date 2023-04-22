@@ -1,37 +1,17 @@
-$linkPadding: 30px;
+@import '../../styles/shared';
+
+$linkPaddingMobile: 30px;
+$linkPadding: 12px 30px 0 30px;
 
 .homepageMain {
     display: flex;
     justify-content: space-between;
     font-size: larger;
-}
+    z-index: 2;
 
-.aboutMe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: $linkPadding;
-}
-
-.work {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: $linkPadding;
-}
-
-.projects {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: $linkPadding;
-}
-
-.contact {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: $linkPadding;
+    @include media-desktopSm {
+        flex-direction: column;
+    }
 }
 
 .link {
@@ -40,4 +20,63 @@ $linkPadding: 30px;
     // &:hover {
     //     background-color: grey;
     // }
+}
+
+.aboutMe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: $linkPaddingMobile;
+
+    @include media-desktopSm {
+        position: static;
+        padding: 30px 30px 0px 30px;
+    }
+}
+
+.work {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: $linkPaddingMobile;
+
+    @include media-desktopSm {
+        position: static;
+        padding: $linkPadding;
+    }
+}
+
+.projects {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: $linkPaddingMobile;
+
+    @include media-desktopSm {
+        position: static;
+        padding: $linkPadding;
+    }
+}
+
+.contact {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: $linkPaddingMobile;
+
+    @include media-desktopSm {
+        position: static;
+        padding: $linkPadding;
+    }
+}
+
+.canvasDiv {
+    width: 100vw;
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    @include media-desktopSm {
+        position: static;
+        height: calc(100vh - 166px);
+    }
 }
