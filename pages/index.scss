@@ -1,24 +1,26 @@
+@font-face {
+  font-family: "Aileron-Regular";
+  src: url(../assets/fonts/Aileron-Regular.otf) format("woff");
+}
 
 @font-face {
-  font-family: "Halyard-Display";
-  src: url(../assets/fonts/c4d8819fda4c3fd79e36cedcc8d422bb.woff) format('woff'),
-    url(../assets/fonts/c4d8819fda4c3fd79e36cedcc8d422bb.woff2) format('woff2');
-  font-weight: 200;
+  font-family: "Aileron-Light";
+  src: url(../assets/fonts/Aileron-Light.otf) format("woff");
 }
 
 body {
   margin: 0;
   height: 100%;
   background-color: #000000;
-  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+  background-image: linear-gradient(147deg, #000000 0%, #333333 85%);
   background-attachment: fixed;
-  font-family: 'Halyard-Display';
+  font-family: "Aileron-Regular";
   color: white;
 }
 
 .main {
   display: flex;
-  font-family: 'Halyard-Display';
+  font-family: "Aileron-Regular";
   color: white;
   width: 100%;
   height: 100%;

@@ -1,11 +1,11 @@
 {
   "aboutme": {
     "title": "ERIC BILAVER",
-    "description": "currently looking for co-op/intern work this Fall.\nreach out if you do something cool",
+    "description": "currently looking for co-op/intern work this Fall.\n\nreach out if you do something cool",
     "lists": [
       {
         "name": "THINGS I DO",
-        "description": "Front-End\n     React\n     Vue\n     Three.JS\n     Back-End\n     C(++)\n     Golang"
+        "description": "Front-End\n     React\n     Vue\n     Three.JS\nBack-End\n     C(++)\n     Golang"
       },
       {
         "name": "LET'S TALK"

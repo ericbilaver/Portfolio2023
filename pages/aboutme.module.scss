@@ -3,27 +3,62 @@
 .aboutMe {
   display: flex;
   flex-direction: column;
-  padding: 50px 40px;
 }
-.link {
-  color: white;
+
+.nameTitle {
+  font-family: "Aileron-Regular";
+  font-size: 32px;
   text-decoration: none;
-  padding: 30px;
+  color: white;
+  padding: 20px 0px 0px 20px;
+  @include media-desktopSm {
+    font-size: 64px;
+    padding: 70px 0px 0px 70px;
+  }
+}
+
+.aboutMeContent {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 62px 0px 62px;
+  white-space: pre-wrap;
+}
+
+.description {
+  font-family: "Aileron-Light";
+  font-size: 32px;
+  @include media-desktopSm {
+    font-size: 64px;
+  }
 }
 
 .talents {
+  font-family: "Aileron-Light";
   display: flex;
   flex-direction: column;
   @include media-desktopSm {
     flex-direction: row;
+    justify-content: space-between;
   }
   .talent {
+    flex-direction: column;
     .talentTitle {
       text-align: center;
+      color: #626262;
+      font-size: 32px;
+      padding: 54px 0px 14px 0px;
+      @include media-desktopSm {
+        padding: 114px 0px 14px 0px;
+        font-size: 64px;
+      }
     }
     a {
       text-decoration: none;
       color: white;
+    }
+
+    font-size: 32px;
+    @include media-desktopSm {
     }
   }
 }
