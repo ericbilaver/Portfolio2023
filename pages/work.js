@@ -17,7 +17,7 @@ export default function Work() {
         </Link>
       </div>
       <div className={css.workList}>
-        {content.work.map((e) => {
+        {content.work.reverse().map((e) => {
           return <WorkItem data={e} />;
         })}
       </div>

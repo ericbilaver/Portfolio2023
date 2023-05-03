@@ -1,11 +1,29 @@
-@import '../styles/_shared.scss';
+@import "../styles/_shared.scss";
 
 .aboutMe {
-    display: flex;
-    padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 40px;
 }
 .link {
-    color: white;
-    text-decoration: none;
-    padding: 30px;
+  color: white;
+  text-decoration: none;
+  padding: 30px;
+}
+
+.talents {
+  display: flex;
+  flex-direction: column;
+  @include media-desktopSm {
+    flex-direction: row;
+  }
+  .talent {
+    .talentTitle {
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
 }
