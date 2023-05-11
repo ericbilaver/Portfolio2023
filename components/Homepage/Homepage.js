@@ -28,7 +28,15 @@ function isTouchDevice() {
 
 export default function Homepage({ speed, factor, url }) {
   useEffect(() => {
-    window.addEventListener("deviceorientation", handleMotion);
+    if (isTouchDevice()) {
+      DeviceOrientationEvent.requestPermission()
+        .then((response) => {
+          if (response == "granted") {
+            window.addEventListener("deviceorientation", handleMotion);
+          }
+        })
+        .catch(console.error);
+    }
   });
 
   function Rig({ children }) {
