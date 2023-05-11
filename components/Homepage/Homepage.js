@@ -13,8 +13,8 @@ const handleMotion = (event) => {
   if (Math.abs(event.gamma) > 90) {
     deviceOrient.y = Math.sign(event.gamma) * (89 / 2);
   }
-  deviceOrient.x = event.beta / 90; // In degree in the range [-90,90) => [-1, 1]
-  deviceOrient.y = event.gamma / 45; // In degree in the range [-180,180) => [-1, 1]
+  deviceOrient.x = event.beta * 0.05; // In degree in the range [-90,90) => [-1, 1]
+  deviceOrient.y = event.gamma * 0.05; // In degree in the range [-180,180) => [-1, 1]
   console.log(event);
 };
 
