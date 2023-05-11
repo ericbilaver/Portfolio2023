@@ -1,10 +1,10 @@
 import Image from "next/image";
-import css from "./WorkItem.module.scss";
+import css from "./ProjectItem.module.scss";
 import Link from "next/link";
 
-export default function WorkItem({ data }) {
+export default function ProjectItem({ data, innerRef }) {
   return (
-    <div className={css.workItem} style={{ background: data.color }}>
+    <div className={css.projectItem} ref={innerRef}>
       <div className={css.eyebrowRow}>
         {data.link === "" ? null : (
           <div className={css.Image}>
@@ -14,12 +14,8 @@ export default function WorkItem({ data }) {
           </div>
         )}
         <div className={css.eyebrowText}>
-          <h2>
-            {data.title} - {data.company}
-          </h2>
-          <p>
-            {data.location} | {data.dates}
-          </p>
+          <h2>{data.title}</h2>
+          <p>{data.dates}</p>
         </div>
       </div>
 

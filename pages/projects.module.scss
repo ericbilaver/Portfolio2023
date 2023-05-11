@@ -1,0 +1,20 @@
+@import "../styles/_shared.scss";
+
+.projects {
+  padding: 30px 10px;
+}
+.link {
+  color: white;
+  text-decoration: none;
+  padding: 30px;
+}
+.projectList {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 30px;
+  :nth-child(even) {
+    align-self: flex-end;
+  }
+
+}

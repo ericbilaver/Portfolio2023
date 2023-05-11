@@ -89,11 +89,24 @@
       "desc": ["Currently Working, TBA!"]
     }
   ],
-  "projects": {
-    "deltahacks": {
-      "logo": "",
+  "projects": [
+    {
+      "name": "website2.0",
+        "logo": "/images/Website.png",
+        "link": "http://ericbilaver.com/",
+        "title": "Portfolio Site 2.0",
+        "dates": "May 2023",
+        "desc": [
+          "• Redesigned original portfolio site from the ground up to display new talents and work",
+          "• Architected site using React, Next.js, and Vercel",
+          "• Designed and created interactive Three.JS models on site to display new working talent with the technology"
+        ]
+      },
+    {
+    "name": "deltahacks",
+      "logo": "/images/Delta.png",
       "link": "https://devpost.com/software/quil",
-      "title": "Deltahacks 2021 - Quil",
+      "title": "Deltahacks 2021 (Quil)",
       "dates": "Mar 2021",
       "desc": [
         "• Created a productivity site to that serves as an 'all-in-one' project manager, to-do list, and effective note-taking software ('Quil')",
@@ -101,8 +114,23 @@
         "• Worked on front-end development as well as logo design using Figma"
       ]
     },
-    "HTN": {
-      "logo": "",
+    {
+      "name": "website1.0",
+        "logo": "",
+        "link": "",
+        "title": "Portfolio Site 1.0",
+        "dates": "Feb 2021",
+        "desc": [
+          "• Made my first hosted website using Gatsby and GitHub Pages",
+          "• Designed pages and components using Figma",
+          "• Secured site using HTTPS"
+        ]
+      },
+
+
+{
+  "name": "HTN",
+      "logo": "/images/HTN.png",
       "link": "https://devpost.com/software/hack-the-north-2020-04oqxr",
       "title": "Hack The North 2020",
       "dates": "Jan 2021",
@@ -111,8 +139,9 @@
         "• Implemented the Vonage Video API to create a global video calling system; received positive feedback from official Vonage representative"
       ]
     },
-    "ECOO": {
-      "logo": "",
+{
+  "name": "ECOO",
+  "logo": "",
       "link": "",
       "title": "ECOO Programming Contest",
       "dates": "May 2019",
@@ -120,7 +149,8 @@
         "• Collaborated with 3 team members to place first in the Halton region by programming solutions to complex computational problems"
       ]
     },
-    "RPIGoogle": {
+{
+  "name": "GoogleRPI",
       "logo": "",
       "link": "",
       "title": "Raspberry Pi Google Assistant",
@@ -129,8 +159,9 @@
         "• Implemented a working model of the Google Assistant API into a Raspberry Pi with working microphone, speaker, and visual display peripherals to create an ultra-cost-effective “Google Nest Hub”"
       ]
     },
-    "NDSTEAM": {
-      "logo": "",
+{
+    "name": "NDSTEAM",    
+  "logo": "",
       "link": "",
       "title": "S.T.E.A.M. (STEM & Arts) Club",
       "dates": "Sept 2017 - Jun 2019",
@@ -139,6 +170,6 @@
         "• Effectively collaborated with over 100 students to create a functioning web-connected greenhouse from scratch"
       ]
     }
-  },
+  ],
   "contact": {}
 }
