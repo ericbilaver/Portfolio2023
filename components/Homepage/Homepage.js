@@ -10,29 +10,55 @@ import Link from "next/link";
  */
 let deviceOrient = { x: 0, y: 0 };
 const handleMotion = (event) => {
-  deviceOrient.x = event.beta; // In degree in the range [-180,180)
-  deviceOrient.y = event.gamma; // In degree in the range [-90,90)
-  console.log(deviceOrient);
+  deviceOrient.x = event.beta / 180; // In degree in the range [-180,180) => [-1, 1]
+  deviceOrient.y = event.gamma / 90; // In degree in the range [-90,90) => [-1, 1]
+  console.log(event);
 };
+
+function isTouchDevice() {
+  return (
+    "ontouchstart" in window ||
+    navigator.maxTouchPoints > 0 ||
+    navigator.msMaxTouchPoints > 0
+  );
+}
 
 export default function Homepage({ speed, factor, url }) {
   useEffect(() => {
-    window.addEventListener("devicemotion", handleMotion, true);
+    window.addEventListener("deviceorientation", handleMotion);
   });
 
   function Rig({ children }) {
     const ref = useRef();
     useFrame((state) => {
-      ref.current.rotation.y = THREE.MathUtils.lerp(
-        ref.current.rotation.y,
-        (state.mouse.x * Math.PI) / 10,
-        0.05
-      );
-      ref.current.rotation.x = THREE.MathUtils.lerp(
-        ref.current.rotation.x,
-        (state.mouse.y * Math.PI) / 10,
-        0.05
-      );
+      if (isTouchDevice()) {
+        // mobile / touch
+        const factorX = deviceOrient.x === null ? 0 : deviceOrient.x;
+        const factorY = deviceOrient.y === null ? 0 : deviceOrient.y;
+
+        ref.current.rotation.y = THREE.MathUtils.lerp(
+          ref.current.rotation.y,
+          (factorX * Math.PI) / 10,
+          0.05
+        );
+        ref.current.rotation.x = THREE.MathUtils.lerp(
+          ref.current.rotation.x,
+          (factorY * Math.PI) / 10,
+          0.05
+        );
+      } else {
+        // desktop / no touch
+        ref.current.rotation.y = THREE.MathUtils.lerp(
+          ref.current.rotation.y,
+          (state.mouse.x * Math.PI) / 10,
+          0.05
+        );
+        ref.current.rotation.x = THREE.MathUtils.lerp(
+          ref.current.rotation.x,
+          (state.mouse.y * Math.PI) / 10,
+          0.05
+        );
+      }
     });
     return <group ref={ref}>{children}</group>;
   }
