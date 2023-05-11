@@ -10,8 +10,11 @@ import Link from "next/link";
  */
 let deviceOrient = { x: 0, y: 0 };
 const handleMotion = (event) => {
-  deviceOrient.x = event.beta / 180; // In degree in the range [-180,180) => [-1, 1]
-  deviceOrient.y = event.gamma / 90; // In degree in the range [-90,90) => [-1, 1]
+  if (Math.abs(event.gamma) > 90) {
+    deviceOrient.y = Math.sign(event.gamma) * (89 / 2);
+  }
+  deviceOrient.x = event.beta / 90; // In degree in the range [-90,90) => [-1, 1]
+  deviceOrient.y = event.gamma / 45; // In degree in the range [-180,180) => [-1, 1]
   console.log(event);
 };
 
@@ -38,12 +41,12 @@ export default function Homepage({ speed, factor, url }) {
 
         ref.current.rotation.y = THREE.MathUtils.lerp(
           ref.current.rotation.y,
-          (factorX * Math.PI) / 10,
+          (factorY * Math.PI) / 10,
           0.05
         );
         ref.current.rotation.x = THREE.MathUtils.lerp(
           ref.current.rotation.x,
-          (factorY * Math.PI) / 10,
+          (factorX * Math.PI) / 10,
           0.05
         );
       } else {
