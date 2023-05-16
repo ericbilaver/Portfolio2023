@@ -4,6 +4,7 @@ import * as THREE from "three";
 import { Suspense, useEffect, useRef } from "react";
 import Model from "../Model/Model";
 import Link from "next/link";
+import { DeviceOrientationControls } from "@react-three/drei";
 
 /**
  * https://codesandbox.io/s/baked-ao-f5sgi
@@ -15,7 +16,6 @@ const handleMotion = (event) => {
   }
   deviceOrient.x = event.beta * 0.05; // In degree in the range [-90,90) => [-1, 1]
   deviceOrient.y = event.gamma * 0.05; // In degree in the range [-180,180) => [-1, 1]
-  console.log(event);
 };
 
 function isTouchDevice() {
@@ -28,16 +28,21 @@ function isTouchDevice() {
 
 export default function Homepage({ speed, factor, url }) {
   useEffect(() => {
-    if (isTouchDevice()) {
-      DeviceOrientationEvent.requestPermission()
+    if (
+      isTouchDevice() &&
+      typeof DeviceMotionEvent.requestPermission === "function"
+    ) {
+      DeviceMotionEvent.requestPermission()
         .then((response) => {
           if (response == "granted") {
             window.addEventListener("deviceorientation", handleMotion);
           }
         })
         .catch(console.error);
+    } else {
+      window.addEventListener("deviceorientation", handleMotion);
     }
-  });
+  }, []);
 
   function Rig({ children }) {
     const ref = useRef();
