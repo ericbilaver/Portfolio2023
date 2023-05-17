@@ -1,83 +1,17 @@
 import css from "./Homepage.module.scss";
-import { Canvas, useFrame } from "@react-three/fiber";
-import * as THREE from "three";
-import { Suspense, useEffect, useRef } from "react";
-import Model from "../Model/Model";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { DeviceOrientationControls } from "@react-three/drei";
+import threeEntryPoint from "../ThreeJS/threeEntryPoint";
 
 /**
  * https://codesandbox.io/s/baked-ao-f5sgi
  */
-let deviceOrient = { x: 0, y: 0 };
-const handleMotion = (event) => {
-  if (Math.abs(event.gamma) > 90) {
-    deviceOrient.y = Math.sign(event.gamma) * (89 / 2);
-  }
-  deviceOrient.x = event.beta * 0.05; // In degree in the range [-90,90) => [-1, 1]
-  deviceOrient.y = event.gamma * 0.05; // In degree in the range [-180,180) => [-1, 1]
-};
 
-function isTouchDevice() {
-  return (
-    "ontouchstart" in window ||
-    navigator.maxTouchPoints > 0 ||
-    navigator.msMaxTouchPoints > 0
-  );
-}
-
-export default function Homepage({ speed, factor, url }) {
+export default function Homepage() {
+  let canvasRef = useRef();
   useEffect(() => {
-    if (
-      isTouchDevice() &&
-      typeof DeviceMotionEvent.requestPermission === "function"
-    ) {
-      DeviceMotionEvent.requestPermission()
-        .then((response) => {
-          if (response == "granted") {
-            window.addEventListener("deviceorientation", handleMotion);
-          }
-        })
-        .catch(console.error);
-    } else {
-      window.addEventListener("deviceorientation", handleMotion);
-    }
+    threeEntryPoint(canvasRef.current);
   }, []);
-
-  function Rig({ children }) {
-    const ref = useRef();
-    useFrame((state) => {
-      if (isTouchDevice()) {
-        // mobile / touch
-        const factorX = deviceOrient.x === null ? 0 : deviceOrient.x;
-        const factorY = deviceOrient.y === null ? 0 : deviceOrient.y;
-
-        ref.current.rotation.y = THREE.MathUtils.lerp(
-          ref.current.rotation.y,
-          (factorY * Math.PI) / 10,
-          0.05
-        );
-        ref.current.rotation.x = THREE.MathUtils.lerp(
-          ref.current.rotation.x,
-          (factorX * Math.PI) / 10,
-          0.05
-        );
-      } else {
-        // desktop / no touch
-        ref.current.rotation.y = THREE.MathUtils.lerp(
-          ref.current.rotation.y,
-          (state.mouse.x * Math.PI) / 10,
-          0.05
-        );
-        ref.current.rotation.x = THREE.MathUtils.lerp(
-          ref.current.rotation.x,
-          (state.mouse.y * Math.PI) / 10,
-          0.05
-        );
-      }
-    });
-    return <group ref={ref}>{children}</group>;
-  }
 
   return (
     <div className={css.homepageMain}>
@@ -103,24 +37,7 @@ export default function Homepage({ speed, factor, url }) {
           </Link>
         </div>
       </div>
-      <div className={css.canvasDiv}>
-        <Canvas camera={{ position: [0, -10, 65], fov: 50 }}>
-          <pointLight position={[100, 100, 100]} intensity={0.8} />
-          <hemisphereLight
-            color="#ffffff"
-            groundColor="#b9b9b9"
-            position={[-7, 25, 13]}
-            intensity={0.85}
-          />
-          <Suspense fallback={null}>
-            <group position={[0, 0, 0]}>
-              <Rig>
-                <Model />
-              </Rig>
-            </group>
-          </Suspense>
-        </Canvas>
-      </div>
+      <div className={css.canvasDiv} ref={canvasRef}></div>
     </div>
   );
 }
