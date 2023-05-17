@@ -104,7 +104,7 @@ export default function Homepage({ speed, factor, url }) {
         </div>
       </div>
       <div className={css.canvasDiv}>
-        <Canvas camera={{ position: [0, -10, 65], fov: 50 }} dpr={[1, 2]}>
+        <Canvas camera={{ position: [0, -10, 65], fov: 50 }}>
           <pointLight position={[100, 100, 100]} intensity={0.8} />
           <hemisphereLight
             color="#ffffff"
