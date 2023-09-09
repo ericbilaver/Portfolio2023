@@ -1,35 +1,36 @@
 .workItem {
-    border-radius: 19px;
+  border-radius: 19px;
 }
 
 .eyebrowRow {
-    display: flex;
-    flex-direction: row;
-    .Image {
-        padding-top: 15px;
-        padding-left: 15px;
-    }
+  display: flex;
+  flex-direction: row;
+  .Image {
+    padding-top: 15px;
+    padding-left: 15px;
+    border-radius: 57px;
+  }
 
-    .eyebrowText {
-        padding: 20px;
-        text-transform: uppercase;
-        h2 {
-            font-family: "Inter";
-            font-weight: bold;
-            margin: 0;
-            padding: 0;
-        }
-        p {
-            font-family: "Inter";
-            font-weight: 300;
-            margin: 0;
-            padding-top: 20px;
-        }
+  .eyebrowText {
+    padding: 20px;
+    text-transform: uppercase;
+    h2 {
+      font-family: "Inter";
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
     }
+    p {
+      font-family: "Inter";
+      font-weight: 300;
+      margin: 0;
+      padding-top: 20px;
+    }
+  }
 }
 
 .accomplishments {
-    white-space: pre-line;
-    padding: 20px;
-    font-family: "Inter";
+  white-space: pre-line;
+  padding: 20px;
+  font-family: "Inter";
 }

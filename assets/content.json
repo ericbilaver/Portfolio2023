@@ -86,24 +86,54 @@
       "company": "JAM3",
       "location": "Toronto, ON",
       "dates": "Jan 2023 - Apr 2023",
-      "desc": ["• Created components and implemented API calls with an experienced team in React for Shopify’s Entrepreneurship Index webpage", "• Worked with Three.JS and WebGL to create a company art piece displayed on their website", "• Recreated a past client site using a Next.js framework to research usability and performance, which was used to create the company-wide boilerplate"]
+      "desc": [
+        "• Created components and implemented API calls with an experienced team in React for Shopify’s Entrepreneurship Index webpage",
+        "• Worked with Three.JS and WebGL to create a company art piece displayed on their website",
+        "• Recreated a past client site using a Next.js framework to research usability and performance, which was used to create the company-wide boilerplate"
+      ]
+    },
+    {
+      "name": "Indigo",
+      "color": "#2a2d93",
+      "logo": "/images/Indigo.png",
+      "link": "https://www.indigo.ca/",
+      "title": "Android Developer",
+      "company": "Indigo Inc.",
+      "location": "Toronto, ON",
+      "dates": "Sept 2023 - Dec 2023",
+      "desc": [
+        "• Independently architected in-store Search Kiosk software using Kotlin/Android for use in 200+ stores across Canada",
+        "• Worked as project lead and created CI/CD and testing frameworks to improve efficiency by 20+%",
+        "• TBA, Still Working!"
+      ]
     }
   ],
   "projects": [
     {
-      "name": "website2.0",
-        "logo": "/images/Website.png",
-        "link": "http://ericbilaver.com/",
-        "title": "Portfolio Site 2.0",
-        "dates": "May 2023",
-        "desc": [
-          "• Redesigned original portfolio site from the ground up to display new talents and work",
-          "• Architected site using React, Next.js, and Vercel",
-          "• Designed and created interactive Three.JS models on site to display new working talent with the technology"
-        ]
-      },
+      "name": "FYDP",
+      "logo": "/images/WWW.png",
+      "link": "https://github.com/who-wat-where",
+      "title": "FYDP - Who? WAT? Where?",
+      "dates": "May 2023 - April 2024",
+      "desc": [
+        "• Developed a React Native application to serve as an all-in-one student accessory, offering door-to-door navigation, campus information, and custom user recommendations",
+        "• Designed and implemented an interactive 360° panorama “Street View” component with Three.js, connected backend and frontend code, and created user facing components"
+      ]
+    },
     {
-    "name": "deltahacks",
+      "name": "website2.0",
+      "logo": "/images/Website.png",
+      "link": "http://ericbilaver.com/",
+      "title": "Portfolio Site 2.0",
+      "dates": "May 2023",
+      "desc": [
+        "• Redesigned original portfolio site from the ground up to display new talents and work",
+        "• Architected site using React, Next.js, and Vercel",
+        "• Designed and created interactive Three.JS models on site to display new working talent with the technology"
+      ]
+    },
+    {
+      "name": "deltahacks",
       "logo": "/images/Delta.png",
       "link": "https://devpost.com/software/quil",
       "title": "Deltahacks 2021 (Quil)",
@@ -116,20 +146,19 @@
     },
     {
       "name": "website1.0",
-        "logo": "",
-        "link": "",
-        "title": "Portfolio Site 1.0",
-        "dates": "Feb 2021",
-        "desc": [
-          "• Made my first hosted website using Gatsby and GitHub Pages",
-          "• Designed pages and components using Figma",
-          "• Secured site using HTTPS"
-        ]
-      },
+      "logo": "",
+      "link": "",
+      "title": "Portfolio Site 1.0",
+      "dates": "Feb 2021",
+      "desc": [
+        "• Made my first hosted website using Gatsby and GitHub Pages",
+        "• Designed pages and components using Figma",
+        "• Secured site using HTTPS"
+      ]
+    },
 
-
-{
-  "name": "HTN",
+    {
+      "name": "HTN",
       "logo": "/images/HTN.png",
       "link": "https://devpost.com/software/hack-the-north-2020-04oqxr",
       "title": "Hack The North 2020",
@@ -139,9 +168,9 @@
         "• Implemented the Vonage Video API to create a global video calling system; received positive feedback from official Vonage representative"
       ]
     },
-{
-  "name": "ECOO",
-  "logo": "",
+    {
+      "name": "ECOO",
+      "logo": "",
       "link": "",
       "title": "ECOO Programming Contest",
       "dates": "May 2019",
@@ -149,8 +178,8 @@
         "• Collaborated with 3 team members to place first in the Halton region by programming solutions to complex computational problems"
       ]
     },
-{
-  "name": "GoogleRPI",
+    {
+      "name": "GoogleRPI",
       "logo": "",
       "link": "",
       "title": "Raspberry Pi Google Assistant",
@@ -159,9 +188,9 @@
         "• Implemented a working model of the Google Assistant API into a Raspberry Pi with working microphone, speaker, and visual display peripherals to create an ultra-cost-effective “Google Nest Hub”"
       ]
     },
-{
-    "name": "NDSTEAM",    
-  "logo": "",
+    {
+      "name": "NDSTEAM",
+      "logo": "",
       "link": "",
       "title": "S.T.E.A.M. (STEM & Arts) Club",
       "dates": "Sept 2017 - Jun 2019",

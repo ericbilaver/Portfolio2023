@@ -12,9 +12,11 @@
   display: flex;
   flex-direction: column;
   padding: 30px;
-  gap: 30px;
-  :nth-child(even) {
-    align-self: flex-end;
+  @include media-desktopSm {
+    padding: 30px 300px;
   }
-
+  gap: 30px;
+  // :nth-child(even) {
+  //   align-self: flex-end;
+  // }
 }

@@ -9,7 +9,12 @@ export default function WorkItem({ data }) {
         {data.link === "" ? null : (
           <div className={css.Image}>
             <Link href={data.link}>
-              <Image src={data.logo} width="60" height="60" />
+              <Image
+                src={data.logo}
+                width="60"
+                height="60"
+                style={{ borderRadius: "5px" }}
+              />
             </Link>
           </div>
         )}
