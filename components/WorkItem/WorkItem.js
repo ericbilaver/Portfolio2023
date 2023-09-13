@@ -3,6 +3,7 @@ import css from "./WorkItem.module.scss";
 import Link from "next/link";
 
 export default function WorkItem({ data }) {
+  const listItems = data.desc.map((n) => <p>{n}</p>);
   return (
     <div className={css.workItem} style={{ background: data.color }}>
       <div className={css.eyebrowRow}>
@@ -28,7 +29,7 @@ export default function WorkItem({ data }) {
         </div>
       </div>
 
-      <div className={css.accomplishments}>{data.desc.join("\n")}</div>
+      <div className={css.accomplishments}>{listItems}</div>
     </div>
   );
 }

@@ -1,39 +1,40 @@
-@import '../styles/_shared.scss';
+@import "../styles/_shared.scss";
 
 .main404 {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    align-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+  font-family: "Inter";
+  padding-top: 120px;
+
+  h1 {
+    font-size: 64px;
+    @include media-desktopSm {
+      font-size: 120px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 32px;
+    padding: 10px 40px;
+    padding-bottom: 50px;
+    @include media-desktopSm {
+      font-size: 60px;
+    }
+  }
+
+  .link {
+    font-size: 25px;
+    text-decoration: none;
     color: white;
-    font-family: 'Inter';
-    padding-top: 120px;
-
-    h1 {
-        font-size: 64px;
-        @include media-desktopSm {
-            font-size: 120px;
-        }
+    padding: 10px;
+    border: solid 1px;
+    &:hover {
+      border: solid;
     }
-
-    p {
-        margin: 0;
-        font-size: 32px;
-        padding: 10px 40px;
-        @include media-desktopSm {
-            font-size: 60px;
-        }
-    }
-
-    .link {
-        font-size: 25px;
-        text-decoration: none;
-        color: white;
-        padding: 5px;
-        border: solid 1px;
-        &:hover {
-            border: solid;
-        }
-    }
+  }
 }

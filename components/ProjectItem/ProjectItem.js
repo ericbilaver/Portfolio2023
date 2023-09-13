@@ -3,6 +3,7 @@ import css from "./ProjectItem.module.scss";
 import Link from "next/link";
 
 export default function ProjectItem({ data, innerRef }) {
+  const listItems = data.desc.map((n) => <p>{n}</p>);
   return (
     <div className={css.projectItem} ref={innerRef}>
       <div className={css.eyebrowRow}>
@@ -19,7 +20,7 @@ export default function ProjectItem({ data, innerRef }) {
         </div>
       </div>
 
-      <div className={css.accomplishments}>{data.desc.join("\n")}</div>
+      <div className={css.accomplishments}>{listItems}</div>
     </div>
   );
 }
