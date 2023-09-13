@@ -36,6 +36,10 @@
 
 .accomplishments {
   white-space: pre-line;
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
   font-family: "Inter";
+
+  p {
+    margin: 10px 0px;
+  }
 }

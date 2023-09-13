@@ -95,9 +95,9 @@
     {
       "name": "Indigo",
       "color": "#2a2d93",
-      "logo": "/images/Indigo.png",
+      "logo": "/images/Indigo2.png",
       "link": "https://www.indigo.ca/",
-      "title": "Android Developer",
+      "title": "Android Developer / Project Manager",
       "company": "Indigo Inc.",
       "location": "Toronto, ON",
       "dates": "Sept 2023 - Dec 2023",
@@ -118,6 +118,17 @@
       "desc": [
         "• Developed a React Native application to serve as an all-in-one student accessory, offering door-to-door navigation, campus information, and custom user recommendations",
         "• Designed and implemented an interactive 360° panorama “Street View” component with Three.js, connected backend and frontend code, and created user facing components"
+      ]
+    },
+    {
+      "name": "MunchBox",
+      "logo": "/images/MunchBox.png",
+      "link": "https://github.com/rseln/MunchBox",
+      "title": "ECE 452 - MunchBox",
+      "dates": "May 2023 - April 2024",
+      "desc": [
+        "• Worked in a team of 6 to create a “tiffin” food ordering application using Kotlin and Android Compose",
+        "• Added image upload functionality, backend API connections, and developed front end components"
       ]
     },
     {
