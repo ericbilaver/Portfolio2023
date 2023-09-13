@@ -121,6 +121,17 @@
       ]
     },
     {
+      "name": "MunchBox",
+      "logo": "/images/MunchBox.png",
+      "link": "https://github.com/rseln/MunchBox",
+      "title": "ECE 452 - MunchBox",
+      "dates": "May 2023 - April 2024",
+      "desc": [
+        "• Worked in a team of 6 to create a “tiffin” food ordering application using Kotlin and Android Compose",
+        "• Added image upload functionality, backend API connections, and developing front end components"
+      ]
+    },
+    {
       "name": "website2.0",
       "logo": "/images/Website.png",
       "link": "http://ericbilaver.com/",
